@@ -1,0 +1,6 @@
+{
+    "name":"akiyatkin/waitshow",
+    "requier":{
+        "akiyatkin/load":"~1"
+    }
+}
