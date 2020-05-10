@@ -1,3 +1,7 @@
+/*
+    Повторно передаать функцию для запуска нужно в тойже переменной. 
+    Некоторые запуски будут пропускаться "схлопываться". С Timeout и в animationFrame
+*/
 let CallFrame = (callback) => {
     if (CallFrame.store.has(callback)) return;
     CallFrame.store.add(callback)
@@ -8,4 +12,5 @@ let CallFrame = (callback) => {
 }
 CallFrame.store = new Set()
 
-export default CallFrame;
+export default CallFrame
+export {CallFrame}
