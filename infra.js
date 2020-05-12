@@ -5,7 +5,7 @@ import { DOM } from '/vendor/akiyatkin/load/DOM.js'
 
 let tag = tag => document.getElementsByTagName(tag)
 
-DOM().then(() => {
+DOM.wait('show').then(() => {
     window.addEventListener('scroll', Waitshow)
     Event.handler('Controller.onshow', () => {
         for (let img of tag('img')) {
