@@ -16,20 +16,20 @@ let check = () => {
         //console.log('Недоехали на',{utop, ubot, dtop, dbot})
         if (utop < 0 ) { //Верх скрылся сверху
         }
-        if (ubot < 0) { //Низ выше верхней границы
+        if (ubot < 0) { //!Низ выше верхней границы
         }
         if (dtop < 0 ) { //Верх выше нижней границы
         }
-        if (dbot < 0) { //Низ показался снизу
+        if (dbot < 0) { //!Низ показался снизу
         }
 
-        if (ubot < 0 ) {
+        if (ubot < -200 ) {
             if (!document.body.classList.contains('modal-open')) {
                 el.classList.remove('show')
                 continue 
             }
         }
-        if (dtop < 0 ) {
+        if (dtop < 200 ) {
             el.classList.add('show')
             continue
         }
