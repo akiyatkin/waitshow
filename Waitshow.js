@@ -1,4 +1,4 @@
-import CallFrame from "./CallFrame.js";
+import CallFrame from "./CallFrame.js"
 
 let cls = cls => document.getElementsByClassName(cls)
 
@@ -24,8 +24,10 @@ let check = () => {
         }
 
         if (ubot < 0 ) {
-            el.classList.remove('show')
-            continue 
+            if (!document.body.classList.contains('modal-open')) {
+                el.classList.remove('show')
+                continue 
+            }
         }
         if (dtop < 0 ) {
             el.classList.add('show')
@@ -36,4 +38,5 @@ let check = () => {
     }
 }
 let Waitshow = () => CallFrame(check)
-export {Waitshow};
+window.Waitshow = Waitshow
+export {Waitshow}
