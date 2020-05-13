@@ -14,7 +14,6 @@ DOM.race('show', () => {
         if (ar.length) continue //Для картинок в шапке подвале ничего не добавляем
         img.classList.add('waitshow')
     }
-    console.log('waitshow')
     Waitshow()
 })
 
