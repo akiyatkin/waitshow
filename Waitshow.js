@@ -23,13 +23,13 @@ let check = () => {
         if (dbot < 0) { //!Низ показался снизу
         }
 
-        if (ubot < -200 ) {
+        if (ubot < -100 ) {
             if (!document.body.classList.contains('modal-open')) {
                 el.classList.remove('show')
                 continue 
             }
         }
-        if (dtop < 200 ) {
+        if (dtop < 100 ) {
             el.classList.add('show')
             continue
         }
