@@ -17,4 +17,4 @@ DOM.done('load', href => {
     Waitshow()
 })
 
-CDN.css('waitshow', '/vendor/akiyatkin/waitshow/style.css')
+//CDN.css('waitshow', '/vendor/akiyatkin/waitshow/style.css')
