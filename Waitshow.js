@@ -1,4 +1,4 @@
-import CallFrame from "./CallFrame.js"
+import CallFrame from "/vendor/akiyatkin/waitshow/CallFrame.js"
 
 let cls = cls => document.getElementsByClassName(cls)
 
