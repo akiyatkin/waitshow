@@ -14,29 +14,29 @@ let check = () => {
         //u,d - граница браузера
         //top, bot - граница блока
         //console.log('Недоехали на',{utop, ubot, dtop, dbot})
-        if (utop < 0 ) { //Верх скрылся сверху
+        if (utop < 0) { //Верх скрылся сверху
         }
         if (ubot < 0) { //!Низ выше верхней границы
         }
-        if (dtop < 0 ) { //Верх выше нижней границы
+        if (dtop < 0) { //Верх выше нижней границы
         }
         if (dbot < 0) { //!Низ показался снизу
         }
 
-        if (ubot < -100 ) {
+        if (ubot < -100) {
             if (!document.body.classList.contains('modal-open')) {
                 el.classList.remove('show')
-                continue 
+                continue
             }
         }
-        if (dtop < 100 ) {
+        if (dtop < 100) {
             el.classList.add('show')
             continue
         }
         if (el.offsetHeight) el.classList.remove('show')
-        else  el.classList.add('show')
+        else el.classList.add('show')
     }
 }
 let Waitshow = () => CallFrame(check)
 window.Waitshow = Waitshow
-export {Waitshow}
+export { Waitshow }
