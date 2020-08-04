@@ -37,6 +37,6 @@ let check = () => {
         else el.classList.add('show')
     }
 }
-let Waitshow = () => CallFrame(check)
+let Waitshow = () => CallFrame(check, 200)
 window.Waitshow = Waitshow
 export { Waitshow }
