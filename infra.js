@@ -6,7 +6,7 @@ let tag = tag => document.getElementsByTagName(tag)
 
 window.addEventListener('scroll', Waitshow)
 
-DOM.done('load', href => {
+DOM.done('load', () => {
     for (let img of tag('img')) {
         let path = [], el = img
         while (el && el.parentElement) path.push(el = el.parentElement)
