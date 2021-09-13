@@ -7,7 +7,11 @@ let CallFrame = (callback, t = 200) => {
     const counter = (CallFrame.store.get(callback) || 0) + 1
     CallFrame.store.set(callback, counter)
     if (counter > 1) return
-    requestAnimationFrame(callback) //Запускаем сразу в следующем animationframe
+    requestAnimationFrame(() => {
+        const r = callback()
+        if (r == null) return //Если вернули не null то стек очищается. При повторном вызове конечно всё завного запустится. Нужно из-за асинхронности с отпиской. Отписались а в стеке весит вызов, который срабатывает после того как отписались, что странно.
+        CallFrame.store.set(callback, 1)
+    }) //Запускаем сразу в следующем animationframe
     setTimeout(() => requestAnimationFrame(() => {
         const counter = CallFrame.store.get(callback)
         if (counter > 1) callback()
