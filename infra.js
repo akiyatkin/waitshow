@@ -1,4 +1,3 @@
-import { CDN } from '/vendor/akiyatkin/load/CDN.js'
 import { Waitshow } from '/vendor/akiyatkin/waitshow/Waitshow.js'
 import { DOM } from '/vendor/akiyatkin/load/DOM.js'
 
@@ -16,5 +15,3 @@ DOM.once('load', () => {
     }
     Waitshow()
 })
-
-//CDN.css('waitshow', '/vendor/akiyatkin/waitshow/style.css')
