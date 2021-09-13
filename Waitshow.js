@@ -4,7 +4,6 @@ let cls = cls => document.getElementsByClassName(cls)
 
 let check = () => {
     let height = window.innerHeight
-    console.log('waitshow')
     for (let el of cls('waitshow')) {
         let utop = el.getBoundingClientRect().top; //расстояние от верхней границы браузера до верхней границы блока
         let ubot = el.getBoundingClientRect().bottom; //расстояние от нижней границы браузера до нижней границы блока
